@@ -1,0 +1,19 @@
+<div>
+    Choose your card <span role="img" aria-label="point below">👇</span>
+  </div>
+<mat-button-toggle-group name="Cards" [formControl]="toggleControl">
+  <b *ngFor="let vote of availableVotes" class="buttonGroup">
+    <mat-button-toggle value="{{vote}}" (click)="submit()" class="card">{{vote}}</mat-button-toggle>
+  </b>
+</mat-button-toggle-group>
+  <div>
+    SEE THE RESULTS<span role="img" aria-label="point below">👇</span>
+  </div>
+<div class="voteGroup">
+  <div class="vote" *ngFor="let player of voteList">
+    <div class="card"><b>{{player.vote}}</b></div>
+    <div align="center">{{player.name}}</div>
+  </div>
+</div>
+<button mat-stroked-button (click)="refreshResults()">refresh</button>
+<button mat-stroked-button (click)="clear()">Clear</button>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@microsoft/signalr": "^6.0.8",
+    "firebase": "^9.9.3"
+  }
+}
